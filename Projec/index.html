@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Number Guessing Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+<div class="orb2"></div>
+
+<!-- Win Overlay -->
+<div class="win-overlay" id="winOverlay">
+  <div class="win-number" id="winNumber">42</div>
+  <div class="win-text">🎉 You got it!</div>
+  <div class="win-sub" id="winSub">Solved in 5 guesses</div>
+  <button class="win-play-again" onclick="startNewGame()">Play Again</button>
+</div>
+
+<div class="wrapper">
+  <div class="header">
+    <h1>Guess the <span>Number</span></h1>
+    <span class="tag">v1.0</span>
+  </div>
+
+  <!-- Difficulty -->
+  <div class="difficulty">
+    <button class="diff-btn active" data-range="100" onclick="setDifficulty(this, 100)">Easy · 1–100</button>
+    <button class="diff-btn" data-range="500" onclick="setDifficulty(this, 500)">Medium · 1–500</button>
+    <button class="diff-btn" data-range="1000" onclick="setDifficulty(this, 1000)">Hard · 1–1000</button>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-label">Attempts</span>
+      <span class="stat-value" id="attemptsVal">0</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Best</span>
+      <span class="stat-value" id="bestVal">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Wins</span>
+      <span class="stat-value" id="winsVal">0</span>
+    </div>
+  </div>
+
+  <!-- Range bar -->
+  <div class="range-bar">
+    <span class="range-num" id="rangeLow">1</span>
+    <div class="range-track">
+      <div class="range-fill" id="rangeFill"></div>
+      <div class="range-pointer" id="rangePointer"></div>
+    </div>
+    <span class="range-num" id="rangeHigh">100</span>
+  </div>
+
+  <!-- Input -->
+  <div class="input-area">
+    <input
+      class="guess-input"
+      id="guessInput"
+      type="number"
+      placeholder="???"
+      min="1"
+      autocomplete="off"
+    />
+    <button class="guess-btn" id="guessBtn" onclick="makeGuess()">Guess →</button>
+  </div>
+
+  <!-- Feedback -->
+  <div class="feedback" id="feedback">
+    <span class="feedback-icon">🎯</span>
+    <div class="feedback-text">
+      <strong>Make your first guess!</strong>
+      Type a number and hit Guess.
+    </div>
+  </div>
+
+  <!-- History -->
+  <div class="history-label">Guess History</div>
+  <div class="history" id="history"></div>
+
+  <!-- Actions -->
+  <div class="actions">
+    <button class="action-btn" onclick="startNewGame()">↻ New Game</button>
+    <button class="action-btn danger" onclick="giveUp()">✕ Give Up</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
