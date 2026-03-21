@@ -1,0 +1,30 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+}
+
+.parent-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background: yellow;
+}
+
+.main-heading-div {
+    border: 2px solid black;
+}
+
+.main-container {
+    border: 2px solid black;
+}
+
+
+
+
+
