@@ -10,38 +10,77 @@
 
     <div class="great-div">
         <div class="parent-container">
-            <div class="main-heading-div">
+            <div class="main-heading-div left-panel">
                 <h2><span>Number</span> <br/> Guessing Game</h2>
             </div>
 
-            <div class="main-container">
-                <!-- <div class="game-div"> -->
+            <div class="main-container right-panel">
                     <div class="heading-div">
                         <h4>Guess the Number</h4>
                         <p>Enter a number between 1 to 100</p>
                     </div>
 
                     <div class="input-number-div">
-                        <input type="text" />
+                        <input type="text" id="guessInput" />
                     </div>
 
                     <div class="btn-div">
-                        <button>Guess</button>
-                        <button>Restart</button>
+                        <button onclick="checkGuess()">Guess</button>
+                        <button onclick="resetGame()">Restart</button>
                     </div>
 
                     <div class="result-div">
-                        <p>Hello hii</p>
+                        <p id="message"></p>
                     </div>
                     
                     <div class="attemts-div">
-                        <p>Attemts: 1</p>
+                        <p id="attempts">Attemts: 1</p>
                     </div>
-                <!-- </div> -->
             </div>
         </div>
-
     </div>
+
+    <script src="script.js"></script>
+  
+
+    <!-- <div class="card">
+    Left Panel
+    <div class="left-panel">
+        <div class="decorative-number" id="decorNum">?</div>
+        <div class="badge">1 – 100</div>
+        <h1>Number<br><span>Guessing</span><br>Game</h1>
+        <p class="tagline">Test your intuition. Find the hidden number.</p>
+    </div>
+ 
+    <div class="divider"></div>
+ 
+    Right Panel
+    <div class="right-panel">
+        <div class="game-title">Guess the Number</div>
+        <div class="game-subtitle">Enter a number between 1 and 100</div>
+ 
+        <div class="input-wrap">
+            <input type="number" id="guessInput" min="1" max="100" placeholder="Your guess…" />
+        </div>
+ 
+        <div class="btn-row">
+            <button class="btn btn-primary" id="guessBtn">Guess</button>
+            <button class="btn btn-secondary" id="restartBtn">Restart</button>
+        </div>
+ 
+        <div class="feedback-area">
+            <span class="result-text" id="resultText">Pick a number and take your shot!</span>
+            <div class="attempts-badge">
+                <div class="dot" id="dot"></div>
+                <span id="attemptsText">0 attempts</span>
+            </div>
+        </div>
+ 
+        <div class="range-hint">
+            <div class="bar" id="rangeBar"></div>
+        </div>
+    </div>
+    </div> -->
     
 </body>
 </html>
